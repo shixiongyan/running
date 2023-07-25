@@ -8,6 +8,7 @@ on:
     branches:
       - master
     paths:
+      - scripts/joyrun_sync.py
       - scripts/nike_sync.py
       - scripts/nike_to_strava_sync.py
       - scripts/strava_sync.py
@@ -17,12 +18,11 @@ on:
       - scripts/gpx_sync.py
       - scripts/tcx_sync.py
       - scripts/garmin_to_strava_sync.py
-      - scripts/joyrun_sync.py
       - requirements.txt
 
 env:
   # please change to your own config.
-  RUN_TYPE: joyrun # support joyrun/strava/nike/garmin/garmin_cn/keep/only_gpx/nike_to_strava/strava_to_garmin/strava_to_garmin_cn/garmin_to_strava/garmin_to_strava_cn/codoon, Please change the 'pass' it to your own
+  RUN_TYPE: joyrun # support strava/nike/garmin/garmin_cn/keep/only_gpx/nike_to_strava/strava_to_garmin/strava_to_garmin_cn/garmin_to_strava/garmin_to_strava_cn/codoon, Please change the 'pass' it to your own
   ATHLETE: Bear
   TITLE: Bear Running
   MIN_GRID_DISTANCE: 10 # change min distance here
@@ -35,7 +35,6 @@ env:
   # Dont making this huge, just picking points you needing. https://developers.google.com/maps/documentation/utilities/polylineutility using this tool to making your polyline
   IGNORE_POLYLINE: "ktjrFoemeU~IorGq}DeB"
   IGNORE_RANGE: 200 # Unit meter
-  IGNORE_BEFORE_SAVING = 1
 
 jobs:
   sync:
@@ -72,7 +71,7 @@ jobs:
         if: env.RUN_TYPE == 'nike'
         run: |
           python scripts/nike_sync.py ${{ secrets.NIKE_REFRESH_TOKEN }}
-
+          
       - name: Run sync joyrun script #悦跑圈
         if: env.RUN_TYPE == 'joyrun' 
         run: |
