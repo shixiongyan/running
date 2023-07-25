@@ -30,17 +30,11 @@ env:
   GITHUB_NAME: shixiongyan # change to yours
   GITHUB_EMAIL: shixiongyan@foxmail.com # change to yours
 
-  ## IGNORE_BEFORE_SAVING: True # if you want to ignore some data before saving, set this to True
-  #IGNORE_START_END_RANGE: 10 # Unit meter 
+  # IGNORE_BEFORE_SAVING: True # if you want to ignore some data before saving, set this to True
+  IGNORE_START_END_RANGE: 200 # Unit meter
   # Dont making this huge, just picking points you needing. https://developers.google.com/maps/documentation/utilities/polylineutility using this tool to making your polyline
-  #IGNORE_POLYLINE: "ktjrFoemeU~IorGq}DeB"
-  #IGNORE_RANGE: 10 # Unit meter
-  #IGNORE_START_END_RANGE = 200 # 忽略每个 polyline 的起点和终点的长度（单位：米）。
-
-  IGNORE_START_END_RANGE = 200 # 忽略每个 polyline 的起点和终点的长度（单位：米）。
-  IGNORE_RANGE = 200 # 忽略下面 polyline 中每个点的距离的圆圈（单位：米）。
-  IGNORE_POLYLINE = ktjrFoemeU~IorGq}DeB # 包含要忽略的点的折线。
-  # 在保存到数据库之前进行过滤，你会丢失一些数据，但可以保护你的隐私，如果你使用的是公共仓库，建议设置为1。不设置可关闭。
+  IGNORE_POLYLINE: "ktjrFoemeU~IorGq}DeB"
+  IGNORE_RANGE: 200 # Unit meter
   IGNORE_BEFORE_SAVING = 1
 
 jobs:
