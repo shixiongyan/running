@@ -51,7 +51,7 @@ jobs:
         uses: crazy-max/ghaction-github-pages@v2.2.0
         with:
           # Git branch where site will be deployed
-          target_branch: gh-pages
+          target_branch: master
           # Create incremental commit instead of doing push force
           keep_history: true
           # Build directory to deploy
