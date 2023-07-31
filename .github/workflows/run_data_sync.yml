@@ -6,7 +6,7 @@ on:
     - cron: '0 16,22,0,8,10 * * *'
   push:
     branches:
-      - gh-pages
+      - master
     paths:
       - scripts/joyrun_sync.py
       - scripts/nike_sync.py
