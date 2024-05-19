@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="gpx.py -- https://github.com/tkrajina/gpxpy">
+  <trk>
+    <name>gpx from joyrun</name>
+    <trkseg>
+      <trkpt lat="34.350094" lon="108.747403">
+        <time>2023-08-21T11:46:25Z</time>
+      </trkpt>
+      <trkpt lat="34.350103" lon="108.747494">
+        <time>2023-08-21T11:46:30Z</time>
+      </trkpt>
+      <trkpt lat="34.350167" lon="108.747638">
+        <time>2023-08-21T11:46:35Z</time>
+      </trkpt>
+      <trkpt lat="34.350218" lon="108.747773">
+        <time>2023-08-21T11:46:40Z</time>
+      </trkpt>
+      <trkpt lat="34.350281" lon="108.747767">
+        <time>2023-08-21T11:46:45Z</time>
+      </trkpt>
+      <trkpt lat="34.350371" lon="108.747617">
+        <time>2023-08-21T11:46:50Z</time>
+      </trkpt>
+      <trkpt lat="34.350333" lon="108.747678">
+        <time>2023-08-21T11:46:55Z</time>
+      </trkpt>
+      <trkpt lat="34.350378" lon="108.747857">
+        <time>2023-08-21T11:47:00Z</time>
+      </trkpt>
+      <trkpt lat="34.350483" lon="108.748035">
+        <time>2023-08-21T11:47:05Z</time>
+      </trkpt>
+      <trkpt lat="34.350578" lon="108.748175">
+        <time>2023-08-21T11:47:10Z</time>
+      </trkpt>
+      <trkpt lat="34.350673" lon="108.748271">
+        <time>2023-08-21T11:47:15Z</time>
+      </trkpt>
+      <trkpt lat="34.350715" lon="108.748362">
+        <time>2023-08-21T11:47:20Z</time>
+      </trkpt>
+      <trkpt lat="34.350765" lon="108.748456">
+        <time>2023-08-21T11:47:25Z</time>
+      </trkpt>
+      <trkpt lat="34.350795" lon="108.748518">
+        <time>2023-08-21T11:47:31Z</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>
