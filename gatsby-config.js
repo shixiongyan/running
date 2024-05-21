@@ -5,12 +5,16 @@ module.exports = {
   siteMetadata: {
     siteTitle: 'Bear的跑步记录',
     siteUrl: 'https://shixiongyan.github.io/running/',
-    logo: 'https://profile-avatar.csdnimg.cn/095bbeeada4c48a28f9613711699e637_qq_40757240.jpg',
+    logo: 'https://bpic.588ku.com/element_origin_min_pic/19/03/06/0671794ec57e4e4afcc9146971f618fd.jpg',
     description: 'Personal site and blog',
     navLinks: [
       {
         name: 'blibli',
         url: 'https://space.bilibili.com/388110416',
+      },
+      {
+        name: 'CSDN',
+        url: 'https://blog.csdn.net/qq_40757240?spm=1010.2135.3001.5343',
       },
       {
         name: 'About',
