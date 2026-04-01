@@ -26,7 +26,7 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v4
         with:
-          node-version: "16"
+          node-version: "20"  # 升级到Node.js 20
 
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
@@ -48,7 +48,7 @@ jobs:
           cp -r assets/ public/static
 
       - name: GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v2.2.0
+        uses: crazy-max/ghaction-github-pages@v4  # 升级到v4版本
         with:
           # Git branch where site will be deployed
           target_branch: gh-pages
