@@ -1,7 +1,3 @@
-# Sample workflow for building and deploying a Gatsby site to GitHub Pages
-#
-# To get started with Gatsby see: https://www.gatsbyjs.com/docs/quick-start/
-#
 name: Deploy Gatsby site to Pages
 
 on:
@@ -35,7 +31,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6  # 升级到v6[6](@ref)
+      
       - name: Detect package manager
         id: detect-package-manager
         run: |
@@ -51,11 +48,13 @@ jobs:
             echo "Unable to determine package manager"
             exit 1
           fi
+      
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6  # 升级到v6[6](@ref)
         with:
-          node-version: "20"
+          node-version: "20.x"  # 使用20.x确保兼容性
           cache: ${{ steps.detect-package-manager.outputs.manager }}
+      
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
@@ -64,8 +63,9 @@ jobs:
           #
           # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: gatsby
+      
       - name: Restore cache
-        uses: actions/cache@v4
+        uses: actions/cache@v6  # 升级到v6[6](@ref)
         with:
           path: |
             public
@@ -73,14 +73,17 @@ jobs:
           key: ${{ runner.os }}-gatsby-build-${{ hashFiles('public') }}
           restore-keys: |
             ${{ runner.os }}-gatsby-build-
+      
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+      
       - name: Build with Gatsby
         env:
           PREFIX_PATHS: 'true'
         run: ${{ steps.detect-package-manager.outputs.manager }} run build
+      
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v2  # 使用v2版本[1](@ref)
         with:
           path: ./public
 
@@ -94,4 +97,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v3  # 使用v3版本
